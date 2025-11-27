@@ -1,13 +1,13 @@
 <div align="center">
   
-# 👋 Hi, I'm Xavi
+# 👋 Hi, I'm Antony Xavier
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=32&duration=2800&pause=2000&color=A855F7&center=true&vCenter=true&width=600&lines=Full+Stack+Web+Developer;Creative+Problem+Solver;Open+Source+Enthusiast" alt="Typing SVG" />
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=32&duration=2800&pause=2000&color=A855F7&center=true&vCenter=true&width=600&lines=Full+Stack+Web+Developer;Creative+Problem+Solver;Open+Source+Enthusiast;Available+for+Opportunities!" alt="Typing SVG" />
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=todoist&logoColor=white)](https://your-portfolio-url.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/your-profile)
-[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/your-handle)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your.email@example.com)
+![Open to Work](https://img.shields.io/badge/Open%20To%20Work-YES-success?style=for-the-badge&logo=handshake&logoColor=white)
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/antony-xavier-4b5019333/)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Xavi-003)
 
 </div>
 
@@ -15,27 +15,69 @@
 
 ## 🚀 About Me
 
+<div align="center">
+
+### 💼 Professional Summary
+
+**Full Stack Web Developer** passionate about creating elegant solutions to complex problems.  
+Building scalable applications with modern technologies and clean code.
+
+</div>
+
+<table align="center">
+<tr>
+<td align="center" width="50%">
+
+### 👨‍💻 What I Do
+
+🔹 **Frontend Development**  
+React, Next.js, TypeScript
+
+🔹 **Backend Development**  
+Node.js, Go, Python
+
+🔹 **Database Management**  
+MongoDB, PostgreSQL, Redis
+
+🔹 **DevOps & Deployment**  
+Docker, CI/CD, Cloud Services
+
+</td>
+<td align="center" width="50%">
+
+### 🎯 Current Focus
+
+🌱 **Learning**  
+Advanced System Design & Architecture
+
+💡 **Working On**  
+Scalable Web Applications & Automation
+
+🤝 **Open For**  
+Freelance Projects & Collaborations
+
+⚡ **Fun Fact**  
+I turn coffee into code! ☕️
+
+</td>
+</tr>
+</table>
+
 ```typescript
-const xavi = {
-    pronouns: "he" | "him",
-    code: ["JavaScript", "TypeScript", "Python", "Go", "HTML", "CSS"],
-    askMeAbout: ["web dev", "tech", "app dev", "game dev"],
-    technologies: {
-        frontEnd: {
-            js: ["React", "Next.js", "Vue"],
-            css: ["Tailwind", "Bootstrap", "Material UI"]
-        },
-        backEnd: {
-            js: ["Node.js", "Express"],
-            python: ["Django", "Flask"],
-            go: ["Gin", "Echo"]
-        },
-        databases: ["MongoDB", "PostgreSQL", "MySQL", "Redis"],
-        devOps: ["Docker", "GitHub Actions", "AWS", "Vercel"],
-        tools: ["Git", "Webpack", "Vite", "Figma"]
+const antonyXavier = {
+    role: "Full Stack Developer",
+    location: "India 🇮🇳",
+    experience: "Web Development & App Development",
+    languages: {
+        programming: ["JavaScript", "TypeScript", "Python", "Go"],
+        markup: ["HTML5", "CSS3"]
     },
-    currentFocus: "Building scalable web applications with modern tech stack",
-    funFact: "I debug code faster than I debug my life"
+    currentlyLearning: ["System Design", "Cloud Architecture", "Game Development"],
+    openToWork: true,
+    contact: {
+        linkedin: "antony-xavier-4b5019333",
+        github: "Xavi-003"
+    }
 };
 ```
 
