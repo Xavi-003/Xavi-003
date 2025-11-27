@@ -1,0 +1,52 @@
+<svg width="300" height="60" viewBox="0 0 300 60" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .label {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      fill: #E2E8F0;
+    }
+    @media (prefers-color-scheme: light) {
+      .label { fill: #333; }
+    }
+    .bar-bg {
+      fill: #334155;
+      rx: 5;
+    }
+    @media (prefers-color-scheme: light) {
+      .bar-bg { fill: #e2e8f0; }
+    }
+    .bar-fill {
+      fill: #A855F7;
+      rx: 5;
+      width: 0;
+      animation: load 2s ease-out forwards;
+    }
+    .count {
+      font-family: "Courier New", Courier, monospace;
+      font-size: 20px;
+      font-weight: bold;
+      fill: #A855F7;
+      opacity: 0;
+      animation: fadeIn 0.5s 1.5s forwards;
+    }
+    @keyframes load {
+      0% { width: 0; }
+      100% { width: 85%; } /* Represents 3+ years */
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+  </style>
+
+  <text x="10" y="20" class="label">Experience Loading...</text>
+  
+  <!-- Progress Bar Background -->
+  <rect x="10" y="30" width="280" height="10" class="bar-bg" />
+  
+  <!-- Progress Bar Fill -->
+  <rect x="10" y="30" height="10" class="bar-fill" />
+  
+  <!-- Years Text -->
+  <text x="240" y="20" class="count">3+ Years</text>
+</svg>
