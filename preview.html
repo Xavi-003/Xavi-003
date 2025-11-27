@@ -1,4 +1,36 @@
-<div align="center">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>README Preview</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown.min.css">
+    <style>
+        body {
+            box-sizing: border-box;
+            min-width: 200px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 45px;
+        }
+        @media (max-width: 767px) {
+            body {
+                padding: 15px;
+            }
+        }
+        /* Dark mode support */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #0d1117;
+            }
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body class="markdown-body">
+    <div id="content"></div>
+    <script>
+        const markdown = `<div align="center">
   
 # 👋 Hi, I'm Antony Xavier
 
@@ -63,7 +95,7 @@ I turn coffee into code!
 </tr>
 </table>
 
-```typescript
+\`\`\`typescript
 const antonyXavier = {
     role: "Full Stack Developer",
     location: "India 🇮🇳",
@@ -79,7 +111,7 @@ const antonyXavier = {
         github: "Xavi-003"
     }
 };
-```
+\`\`\`
 
 ---
 
@@ -220,4 +252,8 @@ const antonyXavier = {
 
 **⭐️ From [Xavi](https://github.com/Xavi-003)**
 
-</div>
+</div>`;
+        document.getElementById('content').innerHTML = marked.parse(markdown);
+    </script>
+</body>
+</html>
