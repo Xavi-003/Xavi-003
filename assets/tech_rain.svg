@@ -1,0 +1,54 @@
+<svg width="100%" height="200" viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @keyframes rain {
+      0% { transform: translateY(-50px); opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { transform: translateY(250px); opacity: 0; }
+    }
+    .icon {
+      animation: rain 4s linear infinite;
+    }
+  </style>
+
+  <!-- React Icon -->
+  <g class="icon" style="animation-delay: 0s; transform-origin: 100px 0;">
+    <image href="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" x="100" y="0" width="40" height="40" />
+  </g>
+
+  <!-- Node.js Icon -->
+  <g class="icon" style="animation-delay: 1.5s; transform-origin: 250px 0;">
+    <image href="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" x="250" y="-40" width="40" height="40" />
+  </g>
+
+  <!-- TypeScript Icon -->
+  <g class="icon" style="animation-delay: 0.8s; transform-origin: 400px 0;">
+    <image href="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" x="400" y="-20" width="40" height="40" />
+  </g>
+
+  <!-- Python Icon -->
+  <g class="icon" style="animation-delay: 2.2s; transform-origin: 550px 0;">
+    <image href="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" x="550" y="-60" width="40" height="40" />
+  </g>
+
+  <!-- Go Icon -->
+  <g class="icon" style="animation-delay: 1.2s; transform-origin: 700px 0;">
+    <image href="https://raw.githubusercontent.com/devicons/devicon/master/icons/go/go-original-wordmark.svg" x="700" y="-30" width="40" height="40" />
+  </g>
+
+    <!-- MongoDB Icon -->
+  <g class="icon" style="animation-delay: 2.8s; transform-origin: 150px 0;">
+    <image href="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg" x="150" y="-50" width="40" height="40" />
+  </g>
+  
+  <!-- Docker Icon -->
+  <g class="icon" style="animation-delay: 0.5s; transform-origin: 320px 0;">
+    <image href="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" x="320" y="-10" width="40" height="40" />
+  </g>
+
+    <!-- Next.js Icon -->
+  <g class="icon" style="animation-delay: 3.2s; transform-origin: 620px 0;">
+    <image href="https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg" x="620" y="-40" width="40" height="40" />
+  </g>
+
+</svg>
