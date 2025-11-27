@@ -29,7 +29,7 @@ Building scalable applications with modern technologies and clean code.
 
 <table align="center" width="100%">
 <tr>
-<td align="left" width="50%">
+<td align="left">
 
 ### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People/Technologist.png" alt="Technologist" width="35" height="35" /> What I Do
 
@@ -46,7 +46,7 @@ Building scalable applications with modern technologies and clean code.
 &nbsp;&nbsp;&nbsp;&nbsp;Docker, CI/CD, Cloud Services
 
 </td>
-<td align="left" width="50%">
+<td align="left">
 
 ### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Bullseye.png" alt="Target" width="35" height="35" /> Current Focus
 
