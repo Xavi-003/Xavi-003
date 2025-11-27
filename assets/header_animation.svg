@@ -1,5 +1,6 @@
 <svg width="100%" height="300" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
   <style>
+    /* Rain Animation */
     @keyframes rain {
       0% { transform: translateY(-100px); opacity: 0; }
       10% { opacity: 0.8; }
@@ -7,54 +8,149 @@
       100% { transform: translateY(400px); opacity: 0; }
     }
     .icon {
-      animation: rain 6s linear infinite;
-      opacity: 0.6;
+      animation: rain 8s linear infinite;
+      opacity: 0.5; /* Slightly reduced opacity for better text contrast */
     }
+
+    /* Text Styles */
     .title {
       fill: #c0caf5;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      font-size: 48px;
-      font-weight: bold;
+      font-size: 56px;
+      font-weight: 800;
       text-anchor: middle;
-      animation: fadeIn 2s ease-out;
+      filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.5));
+      animation: slideDown 1.5s ease-out;
     }
+    
     .subtitle {
       fill: #7aa2f7;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      font-size: 24px;
+      font-family: 'Consolas', 'Courier New', monospace;
+      font-size: 28px;
+      font-weight: 600;
       text-anchor: middle;
-      animation: fadeIn 3s ease-out;
+      opacity: 0;
+      animation: typing 6s infinite;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
+
+    /* Text Background for Readability */
+    .text-bg {
+      fill: rgba(13, 17, 23, 0.7); /* Dark semi-transparent background */
+      rx: 15; /* Rounded corners */
+      filter: blur(8px); /* Soft edges */
+    }
+
+    /* Animations */
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-30px); }
       to { opacity: 1; transform: translateY(0); }
     }
+
+    @keyframes typing {
+      0%, 100% { opacity: 0; transform: translateY(10px); }
+      5%, 30% { opacity: 1; transform: translateY(0); }
+      35%, 95% { opacity: 0; transform: translateY(-10px); }
+    }
+    
+    .text-1 { animation-delay: 0s; }
+    .text-2 { animation-delay: 2s; }
+    .text-3 { animation-delay: 4s; }
+
   </style>
 
-  <!-- Background Icons (Base64 Encoded) -->
-  
-  <!-- React -->
-  <g class="icon" style="animation-delay: 0s; transform-origin: 100px 0;">
-    <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlXBzZSByeD0iMTEiIHJ5PSI0LjIiLz4KICAgIDxlbGxpcHNlIHJ4PSIxMSIgcnk9IjQuMiIgdHJhbnNmb3JtPSJyb3RhdGUoNjApIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDEyMCkiLz4KICA8L2c+Cjwvc3ZnPgo=" x="100" y="-50" width="50" height="50" />
-  </g>
+  <!-- === ICONS === -->
 
   <!-- Node -->
-  <g class="icon" style="animation-delay: 2s; transform-origin: 700px 0;">
-    <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij4KICA8cGF0aCBmaWxsPSIjODNDRDI5IiBkPSJNMzkuNiA0MS41bDIzLjctMTMuNiAyMy43IDEzLjZ2MjcuMkw2My4zIDgyLjIgMzkuNiA2OC42eiIvPgogIDxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0zOS42IDQxLjVsMjMuNy0xMy42IDIzLjcgMTMuNnYyNy4yTDYzLjMgODIuMiAzOS42IDY4LjZ6Ii8+CiAgPHBhdGggZmlsbD0iIzQzODUzRCIgZD0iTTYzLjMgMjcuM2wyNC4zIDEzLjl2MjcuOWwtMjQuMyAxMy45LTI0LjMtMTMuOXYtMjcuOXptMy44IDUuN2wtMy44IDIuMi0zLjgtMi4ydjQuNGwzLjggMi4yIDMuOC0yLjJ6Ii8+Cjwvc3ZnPgo=" x="700" y="-50" width="50" height="50" />
-  </g>
-
-  <!-- Python -->
-  <g class="icon" style="animation-delay: 1s; transform-origin: 200px 0;">
-    <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij4KICA8cGF0aCBmaWxsPSIjMzU3MmE1IiBkPSJNNjMuMyAxMS4yYy0xOC40IDAtMTcuMSA4LTE3LjEgOGw2LjYgNi42cy43LTEuNiA0LjgtMS42YzQuMSAwIDExLjMgMS4xIDExLjMgNy45djEwLjJINjEuM3MtMjIuOC0uNS0yMi44IDIxLjJjMCAyMS43IDIwLjggMjAuOC 20.8 20.8di05LjZzLS43LTExLjggMTMuNS0xMS44aDE4LjZ2MTMuOHMyLjggMTguNS0xNi44IDE4LjUtMTguNS04LjktMTguNS04LjlsLTcuOSA3LjlzMTEuMyAxMy4xIDMxLjUgMTMuMWMzMS41IDAgMjguOS0yNS45IDI4LjktMjUuOXYtMjIuNmMwLTI3LjItMjMuMS0yNy4yLTIzLjEtMjcuMnoiLz4KICA8cGF0aCBmaWxsPSIjZmNkMjQwIiBkPSJNNjQuNyA4MS44Yy00LjEgMC0xMS4zLTEuMS0xMS4zLTcuOXYtMTAuMmg3LjZzMjIuOC41IDIyLjgtMjEuMmMwLTIxLjctMjAuOC0yMC44LTIwLjgtMjAuOHY5LjZzLjcgMTEuOC0xMy41IDExLjhoLTE4LjZ2LTEzLjhTMjguMSA5LjIgNDcuNyA5LjJjMTkuNiAwIDE4LjUgOC45IDE4LjUgOC45bDcuOS03LjlTNjIuOC0yLjkgNDIuNi0yLjljLTMxLjUgMC0yOC45IDI1LjktMjguOSAyNS45djIyLjZjMCAyNy4yIDIzLjEgMjcuMiAyMy4xIDI3LjJzMTguNCAwIDE3LjEtOGwtNi42LTYuNnMtLjcgMS42LTQuOCAxLjZ6Ii8+Cjwvc3ZnPgo=" x="200" y="-50" width="50" height="50" />
+  <g class="icon" style="animation-delay: 2.5s; transform-origin: 50px 0;">
+    <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij4KICA8cGF0aCBmaWxsPSIjODNDRDI5IiBkPSJNMzkuNiA0MS41bDIzLjctMTMuNiAyMy43IDEzLjZ2MjcuMkw2My4zIDgyLjIgMzkuNiA2OC42eiIvPgogIDxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0zOS42IDQxLjVsMjMuNy0xMy42IDIzLjcgMTMuNnYyNy4yTDYzLjMgODIuMiAzOS42IDY4LjZ6Ii8+CiAgPHBhdGggZmlsbD0iIzQzODUzRCIgZD0iTTYzLjMgMjcuM2wyNC4zIDEzLjl2MjcuOWwtMjQuMyAxMy45LTI0LjMtMTMuOXYtMjcuOXptMy44IDUuN2wtMy44IDIuMi0zLjgtMi4ydjQuNGwzLjggMi4yIDMuOC0yLjJ6Ii8+Cjwvc3ZnPgo=" x="50" y="-50" width="40" height="40" />
   </g>
 
   <!-- Docker -->
-  <g class="icon" style="animation-delay: 3s; transform-origin: 600px 0;">
-    <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij4KICA8cGF0aCBmaWxsPSIjMjQ5NmVkIiBkPSJNMTEuNiA1OC43aDEwLjV2MTAuNUgxMS42em0xMi45IDBoMTAuNXYxMC41SDI0LjV6bTEyLjkgMGgxMC41djEwLjVIMzcuNHptMTIuOSAwaDEwLjV2MTAuNUg1MC4zem0xMi45IDBoMTAuNXYxMC41SDYzLjJ6bTEyLjkgMGgxMC41djEwLjVINzYuMXptMTIuOSAwaDEwLjV2MTAuNUg4OXptLTY0LjUtMTIuOWgxMC41djEwLjVIMjQuNXptMTIuOSAwaDEwLjV2MTAuNUgzNy40em0xMi45IDBoMTAuNXYxMC41SDUwLjN6bTEyLjkgMGgxMC41djEwLjVINzYuMXptLTEyLjktMTIuOWgxMC41djEwLjVINzYuMXptLTUxLjYgNjQuNWMwIDUuMiA0LjIgOS41IDkuNSA5LjVoNzMuMWM1LjIgMCA5LjUtNC4yIDkuNS05LjUgMC01LjItNC4yLTkuNS05LjUtOS41SDMzLjlDMjguNyA5MS4zIDI0LjUgOTUuNSAyNC41IDEwMC4zeiIvPgo8L3N2Zz4K" x="600" y="-50" width="50" height="50" />
+  <g class="icon" style="animation-delay: 3.8s; transform-origin: 120px 0;">
+    <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij4KICA8cGF0aCBmaWxsPSIjMjQ5NmVkIiBkPSJNMTEuNiA1OC43aDEwLjV2MTAuNUgxMS42em0xMi45IDBoMTAuNXYxMC41SDI0LjV6bTEyLjkgMGgxMC41djEwLjVIMzcuNHptMTIuOSAwaDEwLjV2MTAuNUg1MC4zem0xMi45IDBoMTAuNXYxMC41SDYzLjJ6bTEyLjkgMGgxMC41djEwLjVINzYuMXptMTIuOSAwaDEwLjV2MTAuNUg4OXptLTY0LjUtMTIuOWgxMC41djEwLjVIMjQuNXptMTIuOSAwaDEwLjV2MTAuNUgzNy40em0xMi45IDBoMTAuNXYxMC41SDUwLjN6bTEyLjkgMGgxMC41djEwLjVINzYuMXptLTEyLjktMTIuOWgxMC41djEwLjVINzYuMXptLTUxLjYgNjQuNWMwIDUuMiA0LjIgOS41IDkuNSA5LjVoNzMuMWM1LjIgMCA5LjUtNC4yIDkuNS05LjUgMC01LjItNC4yLTkuNS05LjUtOS41SDMzLjlDMjguNyA5MS4zIDI0LjUgOTUuNSAyNC41IDEwMC4zeiIvPgo8L3N2Zz4K" x="120" y="-50" width="40" height="40" />
   </g>
 
-  <!-- Foreground Text -->
-  <text x="400" y="150" class="title">👋 Hi, I'm Antony Xavier</text>
-  <text x="400" y="200" class="subtitle">Full Stack Web Developer</text>
+  <!-- Go -->
+  <g class="icon" style="animation-delay: 0.8s; transform-origin: 190px 0;">
+    <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij4KICA8cGF0aCBmaWxsPSIjMDBhZGQ4IiBkPSJNMTEyLjggNjcuNmMwIDE4LjItMTMuNyAzMy4xLTMxLjMgMzMuMS0xMy4zIDAtMjQuNy04LjUtMjkuMy0yMC40aDI1LjVjMS42IDMuOSA1LjUgNi43IDEwLjEgNi43IDYuMiAwIDEwLjgtNC41IDEwLjgtMTEuMyAwLTYuMy00LjUtMTAuOC0xMC44LTEwLjgtNS4xIDAtOC43IDMuMS0xMC4yIDcuNGgtMTcuM2MzLjYtMTMuMiAxNS43LTIzLjEgMjkuNy0yMy4xIDE3LjYgMCAzMS4zIDE0LjkgMzEuMyAzMy4xTSA0NS43IDEwMC43Yy0xOC4yIDAtMzMuMS0xNC45LTMzLjEtMzMuMSAwLTE4LjIgMTQuOS0zMy4xIDMzLjEtMzMuMSAxOC4yIDAgMzMuMSAxNC45IDMzLjEgMzMuMSAwIDE4LjItMTQuOSAzMy4xLTMzLjEgMzMuMW0wLTE1LjVjOS43IDAgMTcuNi03LjkgMTcuNi0xNy42IDAtOS43LTcuOS0xNy42LTE3LjYtMTcuNi05LjcgMC0xNy42IDcuOS0xNy42IDE3LjYgMCA5LjcgNy45IDE3LjYgMTcuNiAxNy42Ii8+Cjwvc3ZnPgo=" x="190" y="-50" width="40" height="40" />
+  </g>
+
+  <!-- Bun -->
+  <g class="icon" style="animation-delay: 3.0s; transform-origin: 260px 0;">
+    <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMTEzLjE2IDM0LjM0QzEwNC44IDIyLjEgOTEuMzcgMTMuNzIgNzYuNTIgMTEuODJjLTEuMTktLjE1LTIuMjUtLjU4LTMuMTMtMS4yNy04LjM1LTYuNTYtMTkuOTktNS42LTI3LjI2IDEuOTktLjY4LjcxLTEuNjEgMS4xNS0yLjYgMS4zLTIwLjE4IDMuMDYtMzQuNDIgMjAuMzQtMzQuNDIgNDAuODF2LjA2Yy0uMDIgMTguMzIgMTEuNzUgMzQuNTYgMjkuMTEgNDAuMTUgMS4wMS4zMyAxLjg1IDEuMDUgMi4zNiAyLjAxIDQuODIgOS4wNiAxNi4wMyAxMi40NiAyNS4wOSA3LjY0IDEuMDMtLjU1IDIuMjYtLjU1IDMuMjkgMCA5LjA2IDQuODIgMjAuMjcgMS40MiAyNS4wOS03LjY0LjUxLS45NiAxLjM1LTEuNjggMi4zNi0yLjAxIDE3LjM2LTUuNTkgMjkuMTMtMjEuODMgMjkuMTEtNDAuMTUgMC03LjY5LTIuMTItMTUuMjQtNi4yNy0yMS4zN3oiLz48cGF0aCBmaWxsPSIjZmJmMGJhIiBkPSJNMTEzLjE2IDM0LjM0QzEwNC44IDIyLjEgOTEuMzcgMTMuNzIgNzYuNTIgMTEuODJjLTEuMTktLjE1LTIuMjUtLjU4LTMuMTMtMS4yNy04LjM1LTYuNTYtMTkuOTktNS42LTI3LjI2IDEuOTktLjY4LjcxLTEuNjEgMS4xNS0yLjYgMS4zLTIwLjE4IDMuMDYtMzQuNDIgMjAuMzQtMzQuNDIgNDAuODF2LjA2Yy0uMDIgMTguMzIgMTEuNzUgMzQuNTYgMjkuMTEgNDAuMTUgMS4wMS4zMyAxLjg1IDEuMDUgMi4zNiAyLjAxIDQuODIgOS4wNiAxNi4wMyAxMi40NiAyNS4wOSA3LjY0IDEuMDMtLjU1IDIuMjYtLjU1IDMuMjkgMCA5LjA2IDQuODIgMjAuMjcgMS40MiAyNS4wOS03LjY0LjUxLS45NiAxLjM1LTEuNjggMi4zNi0yLjAxIDE3LjM2LTUuNTkgMjkuMTMtMjEuODMgMjkuMTEtNDAuMTUgMC03LjY5LTIuMTItMTUuMjQtNi4yNy0yMS4zN3pNMzguNjIgNzcuNTJjLTMuNDUgMC02LjI1LTIuOC02LjI1LTYuMjVzMi44LTYuMjUgNi4yNS02LjI1IDYuMjUgMi44IDYuMjUgNi4yNS0yLjggNi4yNS02LjI1IDYuMjV6bTI1LjM4IDM2LjE4Yy04LjQ3IDAtMTUuMzQtNi44Ni0xNS4zNC0xNS4zNCAwLTMuNDUgMi44LTYuMjUgNi4yNS02LjI1czYuMjUgMi44IDYuMjUgNi4yNWMwIDEuNTYuNjMgMi44NCAxLjY4IDMuODkgMS4wNSAxLjA1IDIuMzMgMS42OCAzLjg5IDEuNjggMS41NiAwIDIuODQtLjYzIDMuODktMS42OCAxLjA1LTEuMDUgMS42OC0yLjMzIDEuNjgtMy44OSAwLTMuNDUgMi44LTYuMjUgNi4yNS02LjI1czYuMjUgMi44IDYuMjUgNi4yNWMtLjAxIDguNDctNi44NyAxNS4zNC0xNS4zNCAxNS4zNHptMjUuMzgtMjkuOTNjLTMuNDUgMC02LjI1LTIuOC02LjI1LTYuMjVzMi44LTYuMjUgNi4yNS02LjI1IDYuMjUgMi44IDYuMjUgNi4yNS0yLjggNi4yNS02LjI1IDYuMjV6Ii8+PHBhdGggZmlsbD0iIzMwMzgyZSIgZD0iTTM4LjYyIDc3LjUyYy0zLjQ1IDAtNi4yNS0yLjgtNi4yNS02LjI1czIuOC02LjI1IDYuMjUtNi4yNSA2LjI1IDIuOCA2LjI1IDYuMjUtMi44IDYuMjUtNi4yNSA2LjI1em01MC43NiAwYy0zLjQ1IDAtNi4yNS0yLjgtNi4yNS02LjI1czIuOC02LjI1IDYuMjUtNi4yNSA2LjI1IDIuOCA2LjI1IDYuMjUtMi44IDYuMjUtNi4yNSA2LjI1eiIvPjwvc3ZnPgo=" x="260" y="-50" width="40" height="40" />
+  </g>
+
+  <!-- MongoDB -->
+  <g class="icon" style="animation-delay: 4.2s; transform-origin: 330px 0;">
+    <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij4KICA8cGF0aCBmaWxsPSIjMTE2MTQ5IiBkPSJNNjguMyA5NS42Yy0uNiAzLjMtMiA2LjQtNCA4LjYgMi4zLTMuNiAzLjctNy43IDMuOS0xMi4xeiIvPgogIDxwYXRoIGZpbGw9IiMwMDUzNTEiIGQ9Ik03My41IDY3LjJjMC0yMS40LTE2LjUtMzMuOS0xNi41LTMzLjkgUzQwLjUgNDUuOCA0MC41IDY3LjJjMCAxNS4zIDguMiAyOC4zIDIwLjUgMzQuNiAxLjYtNS4zIDIuNS0xMS4xIDIuNS0xNy4xIDAtNS4xLS43LTEwLjEtMS45LTE0LjkgMy4xIDUuNSA1LjEgMTEuOCA1LjYgMTguNSA1LjgtNS43IDkuNS0xMy42IDkuNS0yMi4yeiIvPgogIDxwYXRoIGZpbGw9IiM1ODk2MzYiIGQ9Ik01NyA5Mi4xYy0xLjItNi43LTEuOS0xMy40LTEuOS0yMC4zIDAtNiAuOC0xMS44IDIuMy0xNy4zIDEuMyA0LjggMi4xIDEwIDIuMSAxNS4zIDAgMTAuNC0yLjcgMjAuMy03LjYgMjkuMSAxLjgtMi4xIDMuNC00LjUgNC44LTcuMS4xLjEuMi4yLjMuM3oiLz4KICA8cGF0aCBmaWxsPSIjZmZmIiBkPSJNNjMuNSA4NC44Yy0uNS02LjctMi41LTEzLTIuNS0xOS41IDAtNS4zLS44LTEwLjUtMi4xLTE1LjMgMS4yIDQuOCAxLjkgOS44IDEuOSAxNC45IDAgNi45LjcgMTMuNiAxLjkgMjAuMy4zLS4xLjYtLjIuOC0uNHoiLz4KICA8cGF0aCBmaWxsPSIjMTE2MTQ5IiBkPSJNNjQuMyA2Ni44YzAgMTAuNC0yLjcgMjAuMy03LjYgMjkuMS4yLTMuMi4xLTYuNS0uNC05LjctLjUtNi43LTIuNS0xMy0yLjUtMTkuNSAwLTUuMy0uOC0xMC41LTIuMS0xNS4zIDEuMiA0LjggMS45IDkuOCAxLjkgMTQuOS4xLjIuMi4zLjMuNXoiLz4KPC9zdmc+Cg==" x="330" y="-50" width="40" height="40" />
+  </g>
+
+  <!-- TypeScript -->
+  <g class="icon" style="animation-delay: 1.8s; transform-origin: 400px 0;">
+    <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij4KICA8cGF0aCBmaWxsPSIjMDA3YWNjIiBkPSJNMiAxMjZWMmwxMjQgMXYxMjN6Ii8+CiAgPHBhdGggZmlsbD0iI2ZmZiIgZD0iTTQ4LjUgOTcuMmMtMi4zIDEuNi01LjggMi41LTkuMyAyLjUtNS4zIDAtNy44LTIuMy03LjgtNy4xVjY4LjNoLTcuNXYtOS44aDcuNVY0M2gxMS42djE1LjVoMTEuN3Y5LjhoLTExLjd2MjEuNmMwIDEuOS41IDIuOCAyLjUgMi44IDEuNiAwIDIuOC0uMyA0LjItLjl6bTQ2LjggMi4zYy0zLjYgMS41LTguMyAyLjQtMTMuMSAyLjQtMTIuNiAwLTE5LjYtNi42LTE5LjYtMTguNSAwLTEyLjUgOC42LTE5LjMgMjEuNS0xOS4zIDYuOSAwIDExLjMgMS41IDE0LjMgMi44bC0yLjYgOS40Yy0yLjUtMS4xLTUuOS0yLjItMTAuNS0yLjItNS44IDAtOS4zIDIuOS05LjMgNy42IDAgNC42IDMuMyA2LjYgMTAuNiA5LjEgOC41IDIuOSAxMi44IDYuOCAxMi44IDE0LjUgMCA4LjMtNi4zIDEzLjYtMTQuMSAxMy42em0tMS44LTExLjVjLTUuNS0yLjEtNy43LTQuMi03LjctNy4zIDAtMi44IDIuMS00LjUgNi42LTQuNSA0LjIgMCA3LjUgMS4xIDkuNSAyLjF6Ii8+Cjwvc3ZnPgo=" x="400" y="-50" width="40" height="40" />
+  </g>
+
+  <!-- Next.js -->
+  <g class="icon" style="animation-delay: 3.2s; transform-origin: 470px 0;">
+    <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij48Y2lyY2xlIGN4PSI2NCIgY3k9IjY0IiByPSI2NCIvPjxwYXRoIGZpbGw9InVybCgjYSkiIGQ9Ik0xMDYuMzE3IDExMi4wMTQgNDkuMTY3IDM4LjRIMzguNHY1MS4xNzloOC42MTR2LTQwLjI0bDUyLjU0IDY3Ljg4NGE2NC4yMTYgNjQuMjE2IDAgMCAwIDYuNzYzLTUuMjA5eiIvPjxwYXRoIGZpbGw9InVybCgjYikiIGQ9Ik04MS43NzggMzguNGg4LjUzM3Y1MS4yaC04LjUzM3oiLz48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImEiIHgxPSIxMDkiIHgyPSIxNDQuNSIgeTE9IjExNi41IiB5Mj0iMTYwLjUiIGdyYWRpZW50VHJhbnNmb3JtPSJzY2FsZSguNzExMTEpIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agc3RvcC1jb2xvcj0iI2ZmZiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2ZmZiIgc3RvcC1vcGFjaXR5PSIwIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9ImIiIHgxPSIxMjEiIHgyPSIxMjAuNzk5IiB5MT0iNTQiIHkyPSIxMDYuODc1IiBncmFkaWVudFRyYW5zZm9ybT0ic2NhbGUoLjcxMTExKSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIHN0b3AtY29sb3I9IiNmZmYiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNmZmYiIHN0b3Atb3BhY2l0eT0iMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjwvc3ZnPgo=" x="470" y="-50" width="40" height="40" />
+  </g>
+
+  <!-- Redis -->
+  <g class="icon" style="animation-delay: 0.3s; transform-origin: 540px 0;">
+    <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij48cGF0aCBmaWxsPSIjRDIyMDI4IiBkPSJNMTE5LjAzIDQ1LjQ2YzYuMDYtMy41IDYuMDYtOS4xNyAwLTEyLjY3bC0yMi0xMi42N2MtNi4wNi0zLjUtMTUuODgtMy41LTIxLjk0IDBsLTIyIDEyLjY3Yy02LjA2IDMuNS02LjA2IDkuMTcgMCAxMi42N2wyMiAxMi42N2M2LjA2IDMuNSAxNS44OCAzLjUgMjEuOTQgMGwyMi0xMi42N3pNMzguNTYgMzcuODhMMTYuNjIgNTAuNTVjLTYuMDYgMy41LTYuMDYgOS4xNyAwIDEyLjY3bDIyIDEyLjY3YzYuMDYgMy41IDE1Ljg4IDMuNSAyMS45NCAwbDIxLjk0LTEyLjY3YzYuMDYtMy41IDYuMDYtOS4xNyAwLTEyLjY3TDYwLjUgMzcuODhjLTYuMDYtMy41LTE1Ljg4LTMuNS0yMS45NCAwek04Mi40NCA4OS44OGwtMjEuOTQgMTIuNjdjLTYuMDYgMy41LTE1Ljg4IDMuNS0yMS45NCAwbC0yMi0xMi42N2MtNi4wNi0zLjUtNi4wNi05LjE3IDAtMTIuNjdsMjItMTIuNjdjNi4wNi0zLjUgMTUuODgtMy41IDIxLjk0IDBsMjEuOTQgMTIuNjdjNi4wNiAzLjUgNi4wNiA5LjE3IDAgMTIuNjd6Ii8+PC9zdmc+Cg==" x="540" y="-50" width="40" height="40" />
+  </g>
+
+  <!-- JavaScript -->
+  <g class="icon" style="animation-delay: 2.8s; transform-origin: 610px 0;">
+    <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij48cGF0aCBmaWxsPSIjRjBEQjRGIiBkPSJNMCAwaDEyOHYxMjhIMHoiLz48cGF0aCBmaWxsPSIjMzIzMzMwIiBkPSJNODEuOTEgODguMzRjNi4yMyAwIDEwLjI2LTMuMDkgMTAuMjYtOC41NiAwLTQuMTUtMi41LTUuOTYtNy45MS04LjI1bC0zLjQ1LTEuNDdjLTUuMzktMi4zMi04LjE4LTUuMTYtOC4xOC0xMS4xNSAwLTguMzYgNi42NS0xMy44NyAxNy4yNi0xMy44NyA2LjU4IDAgMTEuNzUgMS44OSAxNS42IDQuNzVsLTMuMzIgNy42NWMtMy42OC0yLjQzLTcuNzEtNC4wMy0xMi40LTQuMDMtNS41MiAwLTguNjYgMy4wMy04LjY2IDcuNDggMCA0LjAzIDIuNDMgNS44MSA3LjQxIDcuOTVsMy41IDEuNWM2LjI5IDIuNjcgOS4wMiA1Ljg3IDkuMDIgMTEuNTEgMCA5LjEzLTcuMTggMTQuNTMtMTguMzIgMTQuNTMtNy43MSAwLTE0LjEyLTIuNTUtMTguMzItNS44MWwzLjQ0LTcuNzdjMy44NiAyLjk2IDkuMzIgNS41MiAxNC4wNiA1LjUyek00OC4xNiA4Ny41N2MtMS41NC41My0zLjQ0Ljc3LTUuMzMuNzctNy42NSAwLTEyLjM0LTQuNzUtMTIuMzQtMTQuNTNWMzYuMjhoMTEuMTZ2MzUuNzVjMCA0LjM5IDEuMzYgNi41MiA0LjY4IDYuNTIgMS4zNiAwIDIuNDktLjI0IDMuMzItLjU5djkuNjF6Ii8+PC9zdmc+Cg==" x="610" y="-50" width="40" height="40" />
+  </g>
+
+  <!-- gRPC -->
+  <g class="icon" style="animation-delay: 3.5s; transform-origin: 680px 0;">
+    <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij48cGF0aCBmaWxsPSIjMjQ0YzVhIiBkPSJNNDIuNzUgOTYuNDJjLTEuMjUgMC0yLjQ2LS41LTMuMzQtMS4zOWwtMTguNDUtMTguNDVjLTEuODQtMS44NC0xLjg0LTQuODMgMC02LjY3bDE4LjQ1LTE4LjQ1YzEuODQtMS44NCA0LjgzLTEuODQgNi42NyAwIDEuODQgMS44NCAxLjg0IDQuODMgMCA2LjY3bC0xNS4xMiAxNS4xMiAxNS4xMiAxNS4xMmMxLjg0IDEuODQgMS44NCA0LjgzIDAgNi42Ny0uODkuODktMi4wOSAxLjM5LTMuMzQgMS4zOXptNDIuNSAwYy0xLjI1IDAtMi40Ni0uNS0zLjM0LTEuMzktMS44NC0xLjg0LTEuODQtNC44MyAwLTYuNjdsMTUuMTItMTUuMTItMTUuMTItMTUuMTJjLTEuODQtMS44NC0xLjg0LTQuODMgMC02LjY3IDEuODQtMS44NCA0LjgzLTEuODQgNi42NyAwbDE4LjQ1IDE4LjQ1YzEuODQgMS44NCAxLjg0IDQuODMgMCA2LjY3bC0xOC40NSAxOC40NWMtLjg4Ljg5LTIuMDkgMS4zOS0zLjM0IDEuMzl6Ii8+PHBhdGggZmlsbD0iIzI0NGM1YSIgZD0iTTYzLjI1IDExMS42N2MtMS42NCAwLTMuMi0uODYtMy44Mi0yLjMzTDQwLjQ4IDI3LjMzYy0uOS0xLjk5LS4wMi00LjMyIDEuOTctNS4yMiAxLjk5LS45IDQuMzItLjAyIDUuMjIgMS45N2wxOC45NSA4Mi4wMWM5LjkgMS45OS4wMiA0LjMyLTEuOTcgNS4yMi0uNDYuMjEtLjk0LjMxLTEuNDEuMzF6Ii8+PC9zdmc+Cg==" x="680" y="-50" width="40" height="40" />
+  </g>
+
+  <!-- MySQL -->
+  <g class="icon" style="animation-delay: 1.2s; transform-origin: 750px 0;">
+    <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij48cGF0aCBmaWxsPSIjMDA3NThGIiBkPSJNNDQuNDUgMzguODJjLTEuMDgtLjE1LTIuMTItLjIyLTMuMTMtLjIyLTExLjYyIDAtMjEuMDQgOC44LTIxLjA0IDE5LjY2IDAgMTAuODYgOS40MiAxOS42NiAyMS4wNCAxOS42NiAxLjAxIDAgMi4wNS0uMDcgMy4xMy0uMjItMi42My00Ljk2LTQuMTItMTAuNjktNC4xMi0xNi44MyAwLTYuMTQgMS40OS0xMS44NyA0LjEyLTE2LjgzIi8+PHBhdGggZmlsbD0iI0YyOTExMSIgZD0iTTg2LjY4IDM4LjgyYy0xLjA4LS4xNS0yLjEyLS4yMi0zLjEzLS4yMi0xMS42MiAwLTIxLjA0IDguOC0yMS4wNCAxOS42NiAwIDEwLjg2IDkuNDIgMTkuNjYgMjEuMDQgMTkuNjYgMS4wMSAwIDIuMDUtLjA3IDMuMTMtLjIyLTIuNjMtNC45Ni00LjEyLTEwLjY5LTQuMTItMTYuODMgMC02LjE0IDEuNDktMTEuODcgNC4xMi0xNi44MyIvPjxwYXRoIGZpbGw9IiMwMDc1OEYiIGQ9Ik0xMjguMDUgNTguMjZjMC0xMC44Ni05LjQyLTE5LjY2LTIxLjA0LTE5LjY2LTEuMDEgMC0yLjA1LjA3LTMuMTMuMjIgMi42MyA0Ljk2IDQuMTIgMTAuNjkgNC4xMiAxNi44MyAwIDYuMTQtMS40OSAxMS44Ny00LjEyIDE2LjgzIDEuMDguMTUgMi4xMi4yMiAzLjEzLjIyIDExLjYyIDAgMjEuMDQtOC44IDIxLjA0LTE5LjY2Ii8+PHBhdGggZmlsbD0iI0YyOTExMSIgZD0iTTEwNy4wMSA1OC4yNmMwIDYuMTQtMS40OSAxMS44Ny00LjEyIDE2LjgzIDEuMDguMTUgMi4xMi4yMiAzLjEzLjIyIDExLjYyIDAgMjEuMDQtOC44IDIxLjA0LTE5LjY2IDAtMTAuODYtOS40Mi0xOS42Ni0yMS4wNC0xOS42Ni0xLjAxIDAtMi4wNS4wNy0zLjEzLjIyIDIuNjMgNC45NiA0LjEyIDEwLjY5IDQuMTIgMTYuODMiLz48cGF0aCBmaWxsPSIjMDA3NThGIiBkPSJNNjUuNTYgNTguMjZjMC0xMC44Ni05LjQyLTE5LjY2LTIxLjA0LTE5LjY2LTEuMDEgMC0yLjA1LjA3LTMuMTMuMjIgMi42MyA0Ljk2IDQuMTIgMTAuNjkgNC4xMiAxNi44MyAwIDYuMTQtMS40OSAxMS44Ny00LjEyIDE2LjgzIDEuMDguMTUgMi4xMi4yMiAzLjEzLjIyIDExLjYyIDAgMjEuMDQtOC44IDIxLjA0LTE5LjY2Ii8+PC9zdmc+Cg==" x="750" y="-50" width="40" height="40" />
+  </g>
+
+  <!-- Vite -->
+  <g class="icon" style="animation-delay: 2.2s; transform-origin: 80px 0;">
+    <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij48cGF0aCBmaWxsPSIjRkZDIiBkPSJNMCAwaDEyOHYxMjhIMHoiLz48cGF0aCBmaWxsPSIjZmZmIiBkPSJNNjUuNiAxMTAuMWMtMS4xIDIuMS00LjEgMi4xLTUuMiAwbC01OC0xMDMuM2MuOS0yLjMgNC4zLTIuNyA1LjgtLjZsNTQuOCA3Ny44IDUzLjYtOTYuN2MxLjQtMi41IDUuMi0yLjEgNi4xLjZsLTU3LjEgMTIyLjJ6Ii8+PHBhdGggZmlsbD0iI0ZGQyIgZD0iTTQ5LjUgNjcuMkwxNi42IDE0LjJjLTEuMS0yLjEgMS4xLTQuNiAzLjQtNC42aDIyLjRjMS4zIDAgMi41LjcgMy4xIDEuOGwxMi44IDI4LjVjMS41IDMuNCA2LjUgMy4zIDcuOS0uMmw5LjItMjMuNWMuNi0xLjUgMi0yLjUgMy43LTIuNWgyNC41YzIuNCAwIDQuMiAyLjYgMy4xIDQuN0w2NS42IDExMC4xIDQ5LjUgNjcuMnoiLz48L3N2Zz4K" x="80" y="-50" width="40" height="40" />
+  </g>
+
+  <!-- Webpack -->
+  <g class="icon" style="animation-delay: 3.6s; transform-origin: 220px 0;">
+    <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij48cGF0aCBmaWxsPSIjOERENkYzIiBkPSJNMTE2Ljg5IDMyLjYxbC00OC0yNy43MWMtMy4xMi0xLjgtNi45OS0xLjgtMTAuMTEgMGwtNDggMjcuNzFjLTMuMTIgMS44LTUuMDUgNS4xNC01LjA1IDguNzR2NTUuNDJjMCAzLjYgMS45MyA2Ljk0IDUuMDUgOC43NGw0OCAyNy43MWMxLjU2LjkgMy4zMyAxLjM1IDUuMDUgMS4zNXMzLjQ5LS40NSA1LjA1LTEuMzVsNDgtMjcuNzFjMy4xMi0xLjggNS4wNS01LjE0IDUuMDUtOC43NFY0MS4zNWMuMDEtMy42LTEuOTItNi45NC01LjA0LTguNzR6bS01NS4xMi0yMC42bDQzLjI4IDI1LTEwLjgzIDYuMjUtMzIuNDUtMTguNzVWMTIuMDF6bS00OCAyN2w0My4yOS0yNVY1Mi41bC0zMi40OCAxOC43NS0xMC44MS02LjI0VjM5LjAxeiIgLz48cGF0aCBmaWxsPSIjMUI3OUMwIiBkPSJNNjMuODkgMTMuMDh2MzMuMDlsMzIuMzUgMTguNjggMTAuNzYtNi4yMS00My4xMS00NS41NnptLTUuMTEgMzMuMDlWMTMuMDhMMTUuNjcgNTguNjRsMTAuNzYgNi4yMSAzMi4zNS0xOC42OHptMi41NiAxNS43N2wzMC44NS0xNy44MSAxMC43NiA2LjIxLTQxLjYxIDI0LjAydjYxLjY0bC0yNS4wNC0xNC40NlY2MS45NHptMCA5OC45VjEwMC4xbC0zMi4zNS0xOC42OC0xMC43NiA2LjIxIDQzLjExIDQ1LjU2em01LjExLTMzLjA5djMzLjA5bDQzLjExLTQ1LjU2LTEwLjc2LTYuMjEtMzIuMzUgMTguNjh6bS0yLjU2LTE1Ljc3bC0zMC44NSAxNy44MS0xMC43Ni02LjIxIDQxLjYxLTI0LjAyVjEyLjM2bDI1LjA0IDE0LjQ2djYxLjY0eiIgLz48L3N2Zz4K" x="220" y="-50" width="40" height="40" />
+  </g>
+
+  <!-- Linux -->
+  <g class="icon" style="animation-delay: 0.5s; transform-origin: 360px 0;">
+    <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij48cGF0aCBmaWxsPSIjRkZDIiBkPSJNMCAwaDEyOHYxMjhIMHoiLz48cGF0aCBmaWxsPSIjMzMzIiBkPSJNNzkuNSA1NS44YzEwLjUgMTAuNSAxMC41IDI3LjYgMCAzOC4xLTEwLjUgMTAuNS0yNy42IDEwLjUtMzguMSAwdjBMMzAuOSA4My40Yy02LjUtNi41LTYuNS0xNy4xIDAtMjMuNmwzOC0zOC4xYzYuNS02LjUgMTcuMS02LjUgMjMuNiAwbDEwLjUgMTAuNWM2LjUgNi41IDYuNSAxNy4xIDAgMjMuNkw3OS41IDU1Ljh6Ii8+PC9zdmc+Cg==" x="360" y="-50" width="40" height="40" />
+  </g>
+
+  <!-- VSCode -->
+  <g class="icon" style="animation-delay: 2.9s; transform-origin: 500px 0;">
+    <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij48cGF0aCBmaWxsPSIjMDA3YWNjIiBkPSJNMTEyLjMgMjQuN2wtNjMuNiA0OS40IDYzLjYgNDkuNCAxNS43LTcuM1YxMkwxMTIuMyAyNC43eiIvPjxwYXRoIGZpbGw9IiMwMDdhY2MiIGQ9Ik04Mi43IDEwOC4xTDQ4LjcgNzQuMSA4Mi43IDQwLjFsMjkuNiAyNC43LTI5LjYgNDMuM3oiLz48cGF0aCBmaWxsPSIjMDA3YWNjIiBkPSJNMCA5OS4ybDI3LjMgMjAuOCA1NS40LTM1LjktMzQtMzQuNEwwIDk5LjJ6Ii8+PHBhdGggZmlsbD0iIzAwN2FjYyIgZD0iTTAgMjguOGwyNy4zLTIwLjggNTUuNCAzNS45LTM0IDM0LjRMMCAyOC44eiIvPjwvc3ZnPgo=" x="500" y="-50" width="40" height="40" />
+  </g>
+
+  <!-- AI (TensorFlow) -->
+  <g class="icon" style="animation-delay: 1.5s; transform-origin: 640px 0;">
+    <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMTI4IDEyOCI+CiAgPHBhdGggZD0ibTYxLjU1IDEyOC0yMS44NC0xMi42OFY0MC41NUw2LjgxIDU5LjU2bC4wOC0yOC4zMkw2MS41NSAwek02Ni40NiAwdjEyOGwyMS44NC0xMi42OFY3OS4zMWwxNi40OSA5LjUzLS4xLTI0LjYzLTE2LjM5LTkuMzZ2LTE0LjNsMzIuODkgMTkuMDEtLjA4LTI4LjMyeiIgZmlsbD0iI2ZmNmYwMCIgLz4KPC9zdmc+" x="640" y="-50" width="40" height="40" />
+  </g>
+
+  <!-- === FOREGROUND === -->
+
+  <!-- Semi-transparent background for text readability -->
+  <rect x="150" y="90" width="500" height="130" class="text-bg" />
+
+  <!-- Text -->
+  <text x="400" y="140" class="title">👋 Hi, I'm Antony Xavier</text>
+  
+  <!-- Cycling Subtitles -->
+  <text x="400" y="200" class="subtitle text-1">Full Stack Web Developer</text>
+  <text x="400" y="200" class="subtitle text-2">Creative Problem Solver</text>
+  <text x="400" y="200" class="subtitle text-3">Open Source Enthusiast</text>
 
 </svg>
