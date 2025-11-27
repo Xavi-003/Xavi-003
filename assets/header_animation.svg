@@ -1,0 +1,60 @@
+<svg width="100%" height="300" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @keyframes rain {
+      0% { transform: translateY(-100px); opacity: 0; }
+      10% { opacity: 0.8; }
+      90% { opacity: 0.8; }
+      100% { transform: translateY(400px); opacity: 0; }
+    }
+    .icon {
+      animation: rain 6s linear infinite;
+      opacity: 0.6;
+    }
+    .title {
+      fill: #c0caf5;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 48px;
+      font-weight: bold;
+      text-anchor: middle;
+      animation: fadeIn 2s ease-out;
+    }
+    .subtitle {
+      fill: #7aa2f7;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 24px;
+      text-anchor: middle;
+      animation: fadeIn 3s ease-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+
+  <!-- Background Icons (Base64 Encoded) -->
+  
+  <!-- React -->
+  <g class="icon" style="animation-delay: 0s; transform-origin: 100px 0;">
+    <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlXBzZSByeD0iMTEiIHJ5PSI0LjIiLz4KICAgIDxlbGxpcHNlIHJ4PSIxMSIgcnk9IjQuMiIgdHJhbnNmb3JtPSJyb3RhdGUoNjApIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDEyMCkiLz4KICA8L2c+Cjwvc3ZnPgo=" x="100" y="-50" width="50" height="50" />
+  </g>
+
+  <!-- Node -->
+  <g class="icon" style="animation-delay: 2s; transform-origin: 700px 0;">
+    <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij4KICA8cGF0aCBmaWxsPSIjODNDRDI5IiBkPSJNMzkuNiA0MS41bDIzLjctMTMuNiAyMy43IDEzLjZ2MjcuMkw2My4zIDgyLjIgMzkuNiA2OC42eiIvPgogIDxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0zOS42IDQxLjVsMjMuNy0xMy42IDIzLjcgMTMuNnYyNy4yTDYzLjMgODIuMiAzOS42IDY4LjZ6Ii8+CiAgPHBhdGggZmlsbD0iIzQzODUzRCIgZD0iTTYzLjMgMjcuM2wyNC4zIDEzLjl2MjcuOWwtMjQuMyAxMy45LTI0LjMtMTMuOXYtMjcuOXptMy44IDUuN2wtMy44IDIuMi0zLjgtMi4ydjQuNGwzLjggMi4yIDMuOC0yLjJ6Ii8+Cjwvc3ZnPgo=" x="700" y="-50" width="50" height="50" />
+  </g>
+
+  <!-- Python -->
+  <g class="icon" style="animation-delay: 1s; transform-origin: 200px 0;">
+    <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij4KICA8cGF0aCBmaWxsPSIjMzU3MmE1IiBkPSJNNjMuMyAxMS4yYy0xOC40IDAtMTcuMSA4LTE3LjEgOGw2LjYgNi42cy43LTEuNiA0LjgtMS42YzQuMSAwIDExLjMgMS4xIDExLjMgNy45djEwLjJINjEuM3MtMjIuOC0uNS0yMi44IDIxLjJjMCAyMS43IDIwLjggMjAuOC 20.8 20.8di05LjZzLS43LTExLjggMTMuNS0xMS44aDE4LjZ2MTMuOHMyLjggMTguNS0xNi44IDE4LjUtMTguNS04LjktMTguNS04LjlsLTcuOSA3LjlzMTEuMyAxMy4xIDMxLjUgMTMuMWMzMS41IDAgMjguOS0yNS45IDI4LjktMjUuOXYtMjIuNmMwLTI3LjItMjMuMS0yNy4yLTIzLjEtMjcuMnoiLz4KICA8cGF0aCBmaWxsPSIjZmNkMjQwIiBkPSJNNjQuNyA4MS44Yy00LjEgMC0xMS4zLTEuMS0xMS4zLTcuOXYtMTAuMmg3LjZzMjIuOC41IDIyLjgtMjEuMmMwLTIxLjctMjAuOC0yMC44LTIwLjgtMjAuOHY5LjZzLjcgMTEuOC0xMy41IDExLjhoLTE4LjZ2LTEzLjhTMjguMSA5LjIgNDcuNyA5LjJjMTkuNiAwIDE4LjUgOC45IDE4LjUgOC45bDcuOS03LjlTNjIuOC0yLjkgNDIuNi0yLjljLTMxLjUgMC0yOC45IDI1LjktMjguOSAyNS45djIyLjZjMCAyNy4yIDIzLjEgMjcuMiAyMy4xIDI3LjJzMTguNCAwIDE3LjEtOGwtNi42LTYuNnMtLjcgMS42LTQuOCAxLjZ6Ii8+Cjwvc3ZnPgo=" x="200" y="-50" width="50" height="50" />
+  </g>
+
+  <!-- Docker -->
+  <g class="icon" style="animation-delay: 3s; transform-origin: 600px 0;">
+    <image href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij4KICA8cGF0aCBmaWxsPSIjMjQ5NmVkIiBkPSJNMTEuNiA1OC43aDEwLjV2MTAuNUgxMS42em0xMi45IDBoMTAuNXYxMC41SDI0LjV6bTEyLjkgMGgxMC41djEwLjVIMzcuNHptMTIuOSAwaDEwLjV2MTAuNUg1MC4zem0xMi45IDBoMTAuNXYxMC41SDYzLjJ6bTEyLjkgMGgxMC41djEwLjVINzYuMXptMTIuOSAwaDEwLjV2MTAuNUg4OXptLTY0LjUtMTIuOWgxMC41djEwLjVIMjQuNXptMTIuOSAwaDEwLjV2MTAuNUgzNy40em0xMi45IDBoMTAuNXYxMC41SDUwLjN6bTEyLjkgMGgxMC41djEwLjVINzYuMXptLTEyLjktMTIuOWgxMC41djEwLjVINzYuMXptLTUxLjYgNjQuNWMwIDUuMiA0LjIgOS41IDkuNSA5LjVoNzMuMWM1LjIgMCA5LjUtNC4yIDkuNS05LjUgMC01LjItNC4yLTkuNS05LjUtOS41SDMzLjlDMjguNyA5MS4zIDI0LjUgOTUuNSAyNC41IDEwMC4zeiIvPgo8L3N2Zz4K" x="600" y="-50" width="50" height="50" />
+  </g>
+
+  <!-- Foreground Text -->
+  <text x="400" y="150" class="title">👋 Hi, I'm Antony Xavier</text>
+  <text x="400" y="200" class="subtitle">Full Stack Web Developer</text>
+
+</svg>
