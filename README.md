@@ -149,7 +149,7 @@ const antonyXavier = {
 
 <div align="center">
 
-<a href="https://app.daily.dev/antony10"><img src="https://github.com/Xavi-003/Xavi-003/blob/main/devcard.png" width="400" alt="Antony's Dev Card"/></a>
+<a href="https://app.daily.dev/antony10"><img src="devcard.png" width="400" alt="Antony's Dev Card"/></a>
 
 </div>
 
