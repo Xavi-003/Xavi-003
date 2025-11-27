@@ -22,6 +22,8 @@
 **Full Stack Web Developer** passionate about creating elegant solutions to complex problems.  
 Building scalable applications with modern technologies and clean code.
 
+<img src="assets/experience.svg" alt="Years of Experience" />
+
 </div>
 
 <table align="center">
@@ -30,7 +32,7 @@ Building scalable applications with modern technologies and clean code.
 
 ### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People/Technologist.png" alt="Technologist" width="35" height="35" /> What I Do
 
-<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Personal%20Computer.png" alt="Frontend" width="25" height="25" /> **Frontend Development**  
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Laptop.png" alt="Frontend" width="25" height="25" /> **Frontend Development**  
 React, Next.js, TypeScript
 
 <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Gear.png" alt="Backend" width="25" height="25" /> **Backend Development**  
@@ -45,7 +47,7 @@ Docker, CI/CD, Cloud Services
 </td>
 <td align="center" width="50%">
 
-### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Target%20Hit.png" alt="Target" width="35" height="35" /> Current Focus
+### <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Bullseye.png" alt="Target" width="35" height="35" /> Current Focus
 
 <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Books.png" alt="Learning" width="25" height="25" /> **Learning**  
 Advanced System Design
@@ -53,7 +55,7 @@ Advanced System Design
 <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Light%20Bulb.png" alt="Working On" width="25" height="25" /> **Working On**  
 Scalable Web Apps
 
-<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People/Handshake.png" alt="Open For" width="25" height="25" /> **Open For**  
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Briefcase.png" alt="Open For" width="25" height="25" /> **Open For**  
 Freelance & Collabs
 
 <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Hot%20Beverage.png" alt="Coffee" width="25" height="25" /> **Fun Fact**  

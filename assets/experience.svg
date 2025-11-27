@@ -1,0 +1,50 @@
+<svg width="300" height="50" viewBox="0 0 300 50" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .text {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+      font-size: 24px;
+      font-weight: 600;
+      fill: #A855F7; /* Purple to match theme */
+    }
+    .label {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+      font-size: 20px;
+      fill: #E2E8F0; /* Light gray for text */
+    }
+    @media (prefers-color-scheme: light) {
+      .label { fill: #333; }
+    }
+    .scroll-container {
+      clip-path: url(#clip);
+    }
+    .scroll-text {
+      animation: scroll-numbers 3s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    }
+    @keyframes scroll-numbers {
+      0% { transform: translateY(0); }
+      20% { transform: translateY(0); }
+      100% { transform: translateY(-120px); }
+    }
+  </style>
+  
+  <defs>
+    <clipPath id="clip">
+      <rect x="0" y="0" width="50" height="50" />
+    </clipPath>
+  </defs>
+
+  <g transform="translate(10, 10)">
+    <!-- Scrolling Numbers -->
+    <g class="scroll-container" transform="translate(0, -5)">
+      <g class="scroll-text">
+        <text x="10" y="30" class="text" text-anchor="middle">0</text>
+        <text x="10" y="70" class="text" text-anchor="middle">1</text>
+        <text x="10" y="110" class="text" text-anchor="middle">2</text>
+        <text x="10" y="150" class="text" text-anchor="middle">3+</text>
+      </g>
+    </g>
+    
+    <!-- Static Label -->
+    <text x="50" y="25" class="label">Years of Experience</text>
+  </g>
+</svg>
