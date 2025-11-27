@@ -1,10 +1,6 @@
 <div align="center">
   
-<img src="assets/tech_rain.svg" width="100%" alt="Tech Rain" />
-
-# 👋 Hi, I'm Antony Xavier
-
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=32&duration=2800&pause=2000&color=A855F7&center=true&vCenter=true&width=600&lines=Full+Stack+Web+Developer;Creative+Problem+Solver;Open+Source+Enthusiast;Available+for+Opportunities!" alt="Typing SVG" />
+<img src="assets/header_animation.svg" width="100%" alt="Header Animation" />
 
 ![Open to Work](https://img.shields.io/badge/Open%20To%20Work-YES-success?style=for-the-badge&logo=handshake&logoColor=white)
 
